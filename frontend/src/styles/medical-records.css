@@ -1,0 +1,126 @@
+.medical-records-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.records-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.records-header h1 {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.record-form {
+  background-color: var(--bg-primary);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.record-form h2 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.records-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.record-card {
+  background-color: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.record-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.record-icon {
+  font-size: 2.5rem;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.record-details {
+  flex: 1;
+}
+
+.record-details h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.record-type {
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.record-description {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.prescription-details {
+  background-color: var(--bg-secondary);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin: 0.75rem 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.prescription-details strong {
+  color: var(--text-primary);
+}
+
+.record-date {
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.no-records {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 3rem;
+  background-color: var(--bg-primary);
+  border-radius: 12px;
+}
+
+.no-records a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .records-list {
+    grid-template-columns: 1fr;
+  }
+
+  .records-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
